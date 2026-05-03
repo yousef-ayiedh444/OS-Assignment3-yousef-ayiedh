@@ -1,7 +1,7 @@
 # Assignment 3 - Complete Documentation
 
-**Student Name**: [Your Full Name]  
-**Student ID**: [Your ID]  
+**Student Name**: [yousef alshalawi]  
+**Student ID**: [444051021]  
 **Date Submitted**: [Submission Date]
 
 ---
@@ -31,69 +31,69 @@
 
 Document your development process with **minimum 3 entries** showing progression:
 
-### Entry 1 - [Date, Time]
+### Entry 1 - [april 30,2026, 4:00pm]
 **What I implemented**: 
-
+I began by identifying shared resources in the code and comprehending the assignment criteria
 **Challenges encountered**: 
-
+Understanding the locations of racial conditions was challenging
 **How I solved it**: 
-
+I carefully examined the code to find shared variables that were accessed by several threads
 **Testing approach**: 
-
+In order to see inconsistent behavior, I ran the software several times
 **Time spent**: 
-
+2 hours
 ---
 
-### Entry 2 - [Date, Time]
+### Entry 2 - [april 30,2026, 8:00pm]
 **What I implemented**: 
-
+To safeguard shared counters, I created ReentrantLock
 **Challenges encountered**: 
-
+knowing the proper locations for lock() and unlock()
 **How I solved it**: 
-
+To guarantee correct unlocking, I employed try-finally blocks
 **Testing approach**: 
-
+After several runs, I verified that the values were constant
 **Time spent**: 
-
+2 hours
 ---
 
-### Entry 3 - [Date, Time]
+### Entry 3 - [may 1,2026, 3:00pm]
 **What I implemented**: 
-
+I used a semaphore to manage CPU access
 **Challenges encountered**: 
-
+Know how to use acquire() and release()
 **How I solved it**: 
-
+I used a semaphore in the try-finally run() method
 **Testing approach**: 
-
+minimized concurrency and adhered to execution order
 **Time spent**: 
-
+2 hours
 ---
 
-### Entry 4 - [Date, Time]
+### Entry 4 - [may 1,2026, 9:00pm]
 **What I implemented**: 
-
+I used a semaphore in the runToCompletion() function
 **Challenges encountered**: 
-
+appropriately handling interrupted exceptions
 **How I solved it**: 
-
+Used nested try-catch blocks
 **Testing approach**: 
-
+Execution was confirmed to be accurate
 **Time spent**: 
-
+1.5 hours
 ---
 
-### Entry 5 - [Date, Time]
+### Entry 5 - [may 1,2026, 11:00pm]
 **What I implemented**: 
-
+Final testing and debugging
 **Challenges encountered**: 
-
+ensuring that there are no mistakes or deadlocks
 **How I solved it**: 
-
+thorough examination and several test runs
 **Testing approach**: 
-
+run the program more than five times
 **Time spent**: 
-
+1 hour
 ---
 
 ## Part 2: Technical Questions (1 mark)
@@ -102,10 +102,10 @@ Document your development process with **minimum 3 entries** showing progression
 **Q**: Identify and explain TWO race conditions in the original code. For each:
 - What shared resource is affected?
 - Why is concurrent access a problem?
-- What incorrect behavior could occur?
+- What incorrect behavior could occur? 
 
 **Your Answer**:
-
+The contextSwitchCount variable experiences the first race condition when multiple threads increase it at the same time, resulting in inaccurate results. When several threads update totalWaitingTime without synchronizing, the second race scenario takes place. Because actions like increment are not atomic, concurrent access results in inconsistent data. This could lead to inconsistent results and inaccurate statistics
 [Your answer here - 4-6 sentences with code examples]
 
 ---
