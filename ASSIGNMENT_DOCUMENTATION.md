@@ -312,10 +312,10 @@ I discovered that when several threads access common resources, synchronization 
 
 ### Real-world applications:
 **Example 1**: 
-banking systems that allow numerous individuals to view and modify account balances. Transactions are handled accurately and without data distortion thanks to synchronization.
+banking systems that allow numerous individuals to view and modify account balances. Transactions are handled accurately and without data distortion thanks to synchronization
 
 **Example 2**: 
-operating systems in which a number of processes share memory and CPU resources. Synchronization guarantees the equitable and secure distribution of resources.
+operating systems in which a number of processes share memory and CPU resources. Synchronization guarantees the equitable and secure distribution of resources
 ---
 
 ### How I would explain synchronization to others:
