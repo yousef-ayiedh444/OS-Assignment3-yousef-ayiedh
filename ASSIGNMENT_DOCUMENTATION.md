@@ -114,7 +114,7 @@ The contextSwitchCount variable experiences the first race condition when multip
 **Q**: Explain the difference between ReentrantLock and Semaphore. Where did you use each in your code and why?
 
 **Your Answer**:
-
+When accessing shared variables, ReentrantLock is utilized to guarantee mutual exclusion and safeguard important portions. The number of threads that can access a resource at once is managed by a semaphore. ReentrantLock was used in my code to safeguard counters and logs, and Semaphore was used to manage CPU access such that only a certain number of processes could operate concurrently 
 [Your answer here - explain your implementation choices]
 
 ---
@@ -123,7 +123,7 @@ The contextSwitchCount variable experiences the first race condition when multip
 **Q**: What is deadlock? Explain TWO prevention techniques and what you did to prevent deadlocks in your code.
 
 **Your Answer**:
-
+When threads wait endlessly for resources owned by one another, deadlock happens. Using try-finally blocks to guarantee that locks are always released is one preventive strategy. Keeping a constant lock order or avoiding nested locks are two other strategies. I used try-finally in my code to ensure that locks and semaphores were released, avoiding deadlock
 [Your answer here - reference try-finally blocks, lock ordering, etc.]
 
 ---
@@ -136,7 +136,7 @@ The contextSwitchCount variable experiences the first race condition when multip
 - Given that the three counters are independent, which approach provides better concurrency and why?
 
 **Your Answer**:
-
+I secured every counter with a single coarse-grained lock. This prevents complexity and streamlines the implementation. However, because threads can access multiple resources at once, fine-grained locking improves concurrency. Fine-grained locking would perform better because counters are independent, but coarse-grained locking is more straightforward and enough for this task
 [Your answer here - explain coarse-grained vs fine-grained locking, independence of counters, concurrency implications. Show understanding of when to use each approach. 5-8 sentences expected.]
 
 ---
