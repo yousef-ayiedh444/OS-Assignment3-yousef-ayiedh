@@ -226,7 +226,7 @@ java SchedulerSimulationSync```
 **Results**: 
 (Show that running multiple times produces consistent, correct results)
 Total Context Switches: 34
-Total Completed Processes: 20
+Total Completed Processes: 2o
 Total Waiting Time: 1242218ms
 Average Waiting Time: 62110ms
 
